@@ -328,3 +328,148 @@ body {
     transform: skewX(-5deg);
     background-color: #d44e14;
 }
+
+.triangle1, .triangle2, .triangle3 {
+    width: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.triangle1 {
+    border-top: 140px solid transparent;
+    border-right: 140px solid blanchedalmond;
+    border-bottom: 120px solid blanchedalmond;
+    border-left: 120px solid transparent;
+    top: -10px;
+    left: -40px;
+    transform: rotateX(20deg) rotateY(40deg);
+    background-color: blanchedalmond;
+}
+
+.triangle2 {
+    width: 0;
+    border-top: 180px solid transparent;
+    border-right: 140px solid blanchedalmond;
+    border-bottom: 140px solid blanchedalmond;
+    border-left: 120px solid transparent;
+    top: -80px;
+    left: 80px;
+    transform: rotateZ(-70deg);
+}
+
+.triangle3 {
+    width: 0;
+    border-top: 120px solid transparent;
+    border-right: 120px solid blanchedalmond;
+    border-bottom: 90px solid blanchedalmond;
+    border-left: 120px solid transparent;
+    top: -10px;
+    right: -120px;
+    transform: rotate(82deg) skew(20deg);
+}
+
+.triangle1::before {
+    content: "";
+    width: 246px;
+    height: 2px;
+    position: absolute;
+    top: 120px;
+    left: -107px;
+    background-color: black;
+}
+
+.triangle1::after {
+    content: "";
+    width: 2px;
+    height: 250px;
+    position: absolute;
+    top: -130px;
+    left: 140px;
+    background-color: black;
+}
+
+.triangle2::before {
+    content: "";
+    width: 220px;
+    height: 2px;
+    position: absolute;
+    top: 139px;
+    left: -117px;
+    transform: rotate(0.5deg);
+    background-color: black;
+}
+
+.triangle2::after {
+    content: "";
+    width: 2px;
+    height: 248px;
+    position: absolute;
+    top: -82px;
+    left: -37px;
+    transform: rotate(39.5deg);
+    background-color: black;
+}
+
+.triangle3::before {
+    content: "";
+    width: 208px;
+    height: 2px;
+    position: absolute;
+    top: 90px;
+    left: -88px;
+    background-color: black;
+}
+
+.triangle3::after {
+    content: "";
+    width: 2px;
+    height: 106px;
+    position: absolute;
+    top: -14px;
+    left: 120px;
+    background-color: black;
+}
+
+.triangle1 .inside, .triangle2 .inside, .triangle3 .inside {
+    width: 0;
+    position: absolute;
+    outline: 2px solid black;
+}
+
+.triangle1 .inside {
+    border-top: 10px solid #cc4004;
+    border-right: 160px solid #cc4004;
+    border-bottom: 100px solid #cc4004;
+    border-left: 10px solid #cc4004;
+    left: -30px;
+    top: 10px;
+}
+
+.triangle2 .inside {
+    border: 40px solid #cc4004;
+    top: 64px;
+    left: -80px;
+    transform: rotate(-59deg) skewX(30deg) skewY(10deg);
+}
+
+.triangle3 .inside {
+    border-top: 40px solid #cc4004;
+    border-right: 20px solid #cc4004;
+    border-bottom: 40px solid #cc4004;
+    border-left: 50px solid #cc4004;
+    top: 10px;
+    left: 50px;
+}
+
+.darwin:hover .triangle1, .darwin:hover .triangle2, .darwin:hover .triangle3 {
+    opacity: 1;
+}
+
+.darwin:hover .eyes {
+    opacity: 0;
+}
+
+.darwin:hover {
+    cursor: pointer;
+}
